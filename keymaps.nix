@@ -209,6 +209,23 @@
         action = "<cmd>TodoTelescope<cr>";
         options.desc = "Todos";
       }
+      {
+        key = "<leader>S";
+        action = "<cmd>lua require('spectre').toggle()<cr>";
+        options.desc = "Toggle Spectre";
+      }
+      {
+        key = "<leader>sw";
+        action =
+          "<cmd>lua require('spectre').open_visual({select_word=true})<cr>";
+        options.desc = "Search current word";
+      }
+      {
+        key = "<leader>sp";
+        action =
+          "<cmd>lua require('spectre').open_file_search({select_word=true})<cr>";
+        options.desc = "Search on current file";
+      }
 
       # Trouble
       {

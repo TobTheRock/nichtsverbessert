@@ -56,6 +56,7 @@
         };
       };
       yanky.enable = true;
+      spectre.enable = true;
     };
   };
 }
