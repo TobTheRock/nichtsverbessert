@@ -33,7 +33,7 @@
             group = "+markdown";
           }
           {
-            __unkeyed-1 = "<leader>t";
+            __unkeyed-1 = "<leader>d";
             mode = "n";
             group = "+trouble";
           }
@@ -51,6 +51,11 @@
             __unkeyed-1 = "<leader>h";
             mode = "n";
             group = "+harpoon";
+          }
+          {
+            __unkeyed-1 = "<leader>t";
+            mode = "n";
+            group = "+neotest";
           }
         ];
         win = {
@@ -229,32 +234,32 @@
 
       # Trouble
       {
-        key = "<leader>tx";
+        key = "<leader>dx";
         action = "<cmd>Trouble diagnostics toggle<cr>";
         options.desc = "Diagnostics (Trouble)";
       }
       {
-        key = "<leader>tX";
+        key = "<leader>dX";
         action = "<cmd>Trouble diagnostics toggle filter.buf=0<cr>";
         options.desc = "Buffer Diagnostics (Trouble)";
       }
       {
-        key = "<leader>ts";
+        key = "<leader>ds";
         action = "<cmd>Trouble symbols toggle focus=false<cr>";
         options.desc = "Symbols (Trouble)";
       }
       {
-        key = "<leader>tl";
+        key = "<leader>dl";
         action = "<cmd>Trouble lsp toggle focus=false win.position=right<cr>";
         options.desc = "LSP Definitions / references / ... (Trouble)";
       }
       {
-        key = "<leader>tL";
+        key = "<leader>dL";
         action = "<cmd>Trouble loclist toggle<cr>";
         options.desc = "Location List (Trouble)";
       }
       {
-        key = "<leader>tQ";
+        key = "<leader>dQ";
         action = "<cmd>Trouble qflist toggle<cr>";
         options.desc = "Quickfix List (Trouble)";
       }
@@ -328,6 +333,35 @@
         key = "<leader>cc";
         action = "<cmd>lua require('CopilotChat').open()<cr>";
         options.desc = "Copilot Chat";
+      }
+
+      # Neotest
+      {
+        key = "<leader>tt";
+        action = "<cmd>lua require('neotest').run.run()<cr>";
+        options.desc = "Run nearest test";
+      }
+      {
+        key = "<leader>tf";
+        action = "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>";
+        options.desc = "Run tests in file";
+      }
+      {
+        key = "<leader>ts";
+        action = "<cmd>lua require('neotest').summary.toggle()<cr>";
+        options.desc = "Toggle test summary";
+      }
+      {
+        key = "<leader>to";
+        action =
+          "<cmd>lua require('neotest').output.open({ enter = true })<cr>";
+        options.desc = "Show test output";
+      }
+      {
+        key = "<leader>td";
+        action =
+          ''<cmd>lua require('neotest').run.run({strategy = "dap"})<cr>'';
+        options.desc = "Debug nearest test";
       }
 
       # Terminal Mappings

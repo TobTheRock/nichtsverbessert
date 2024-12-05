@@ -32,6 +32,9 @@
         };
       };
     };
-    rustaceanvim = { enable = true; };
+    rustaceanvim = {
+      enable = true;
+      settings.tools.test_executor = "neotest";
+    };
   };
 }
