@@ -49,6 +49,7 @@
         enable = true;
         tagsPackage = pkgs.universal-ctags;
       };
+      dressing.enable = true;
     };
   };
 }

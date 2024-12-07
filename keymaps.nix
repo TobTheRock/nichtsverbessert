@@ -33,7 +33,7 @@
             group = "+markdown";
           }
           {
-            __unkeyed-1 = "<leader>d";
+            __unkeyed-1 = "<leader>D";
             mode = "n";
             group = "+trouble";
           }
@@ -56,6 +56,11 @@
             __unkeyed-1 = "<leader>t";
             mode = "n";
             group = "+neotest";
+          }
+          {
+            __unkeyed-1 = "<leader>d";
+            mode = "n";
+            group = "debugging";
           }
         ];
         win = {
@@ -234,32 +239,32 @@
 
       # Trouble
       {
-        key = "<leader>dx";
+        key = "<leader>Dx";
         action = "<cmd>Trouble diagnostics toggle<cr>";
         options.desc = "Diagnostics (Trouble)";
       }
       {
-        key = "<leader>dX";
+        key = "<leader>DX";
         action = "<cmd>Trouble diagnostics toggle filter.buf=0<cr>";
         options.desc = "Buffer Diagnostics (Trouble)";
       }
       {
-        key = "<leader>ds";
+        key = "<leader>Ds";
         action = "<cmd>Trouble symbols toggle focus=false<cr>";
         options.desc = "Symbols (Trouble)";
       }
       {
-        key = "<leader>dl";
+        key = "<leader>Dl";
         action = "<cmd>Trouble lsp toggle focus=false win.position=right<cr>";
         options.desc = "LSP Definitions / references / ... (Trouble)";
       }
       {
-        key = "<leader>dL";
+        key = "<leader>DL";
         action = "<cmd>Trouble loclist toggle<cr>";
         options.desc = "Location List (Trouble)";
       }
       {
-        key = "<leader>dQ";
+        key = "<leader>DQ";
         action = "<cmd>Trouble qflist toggle<cr>";
         options.desc = "Quickfix List (Trouble)";
       }
@@ -317,17 +322,6 @@
         action = "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>";
         options.desc = "LSP Previous Diagnostic";
       }
-      {
-        key = "<leader>cu";
-        action = "<cmd>lua require('dapui').toggle()<CR>";
-        options.desc = "Toggle Dapui";
-      }
-      {
-        key = "<leader>cb";
-        action = "<cmd>lua require('dap').toggle_breakpoint()<CR>";
-        options.desc = "Toggle breakpoint";
-      }
-
       # Copilot chat
       {
         key = "<leader>cc";
@@ -362,6 +356,187 @@
         action =
           ''<cmd>lua require('neotest').run.run({strategy = "dap"})<cr>'';
         options.desc = "Debug nearest test";
+      }
+
+      # Debugging
+      {
+        mode = "n";
+        key = "<leader>dB";
+        action =
+          "\n        <cmd>lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>\n      ";
+        options = {
+          silent = true;
+          desc = "Breakpoint Condition";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>db";
+        action = ":DapToggleBreakpoint<cr>";
+        options = {
+          silent = true;
+          desc = "Toggle Breakpoint";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>dc";
+        action = ":DapContinue<cr>";
+        options = {
+          silent = true;
+          desc = "Continue";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>da";
+        action = "<cmd>lua require('dap').continue({ before = get_args })<cr>";
+        options = {
+          silent = true;
+          desc = "Run with Args";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>dC";
+        action = "<cmd>lua require('dap').run_to_cursor()<cr>";
+        options = {
+          silent = true;
+          desc = "Run to cursor";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>dg";
+        action = "<cmd>lua require('dap').goto_()<cr>";
+        options = {
+          silent = true;
+          desc = "Go to line (no execute)";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>di";
+        action = ":DapStepInto<cr>";
+        options = {
+          silent = true;
+          desc = "Step into";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>dj";
+        action = "\n        <cmd>lua require('dap').down()<cr>\n      ";
+        options = {
+          silent = true;
+          desc = "Down";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>dk";
+        action = "<cmd>lua require('dap').up()<cr>";
+        options = {
+          silent = true;
+          desc = "Up";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>dl";
+        action = "<cmd>lua require('dap').run_last()<cr>";
+        options = {
+          silent = true;
+          desc = "Run Last";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>do";
+        action = ":DapStepOut<cr>";
+        options = {
+          silent = true;
+          desc = "Step Out";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>dO";
+        action = ":DapStepOver<cr>";
+        options = {
+          silent = true;
+          desc = "Step Over";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>dp";
+        action = "<cmd>lua require('dap').pause()<cr>";
+        options = {
+          silent = true;
+          desc = "Pause";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>dr";
+        action = ":DapToggleRepl<cr>";
+        options = {
+          silent = true;
+          desc = "Toggle REPL";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>ds";
+        action = "<cmd>lua require('dap').session()<cr>";
+        options = {
+          silent = true;
+          desc = "Session";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>dt";
+        action = ":DapTerminate<cr>";
+        options = {
+          silent = true;
+          desc = "Terminate";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>du";
+        action = "<cmd>lua require('dapui').toggle()<cr>";
+        options = {
+          silent = true;
+          desc = "Dap UI";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>dw";
+        action = "<cmd>lua require('dap.ui.widgets').hover()<cr>";
+        options = {
+          silent = true;
+          desc = "Widgets";
+        };
+      }
+      {
+        mode = [ "n" "v" ];
+        key = "<leader>de";
+        action = "<cmd>lua require('dapui').eval()<cr>";
+        options = {
+          silent = true;
+          desc = "Eval";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>df";
+        action =
+          "<CMD>lua require('dap.ext.vscode').load_launchjs()<CR><CMD>Telescope dap configurations<CR>";
+        options = { desc = "Debug Configurations"; };
       }
 
       # Terminal Mappings
