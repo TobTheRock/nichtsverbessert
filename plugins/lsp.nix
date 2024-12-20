@@ -34,7 +34,10 @@
     };
     rustaceanvim = {
       enable = true;
-      settings.tools.test_executor = "neotest";
+      settings = {
+        tools.test_executor = "neotest";
+        lint.default = "clippy";
+      };
     };
   };
 }

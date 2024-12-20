@@ -322,6 +322,12 @@
         action = "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>";
         options.desc = "LSP Previous Diagnostic";
       }
+      # rename symbol
+      {
+        key = "<leader>cR";
+        action = "<cmd>lua vim.lsp.buf.rename()<cr>";
+        options.desc = "LSP Rename Symbol";
+      }
       # Copilot chat
       {
         key = "<leader>cc";
