@@ -88,7 +88,7 @@ in {
           modes = "n";
         };
         MkdnTableNextCell = {
-          key = "<Tab>";
+          key = "<C-Tab>";
           modes = "i";
         };
         MkdnTableNextRow = false;
