@@ -13,6 +13,7 @@
     ./plugins/test.nix
     ./plugins/zenmode.nix
 
+    ./autocmds.nix
     ./options.nix
     ./keymaps.nix
   ];
