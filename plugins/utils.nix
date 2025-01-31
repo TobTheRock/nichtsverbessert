@@ -1,10 +1,13 @@
-{ config, ... }: {
+{ config, pkgs, ... }: {
   programs.nixvim = {
     highlightOverride = {
       FloatBorder.fg = "#${config.lib.stylix.colors.base0D}";
     };
     plugins = {
-      copilot-vim.enable = true;
+      copilot-vim = {
+        enable = true;
+        package = pkgs.vimPlugins.copilot-vim;
+      };
       # TODO not working currently
       #copilot-lua.enable = true;
       copilot-chat.enable = true;
