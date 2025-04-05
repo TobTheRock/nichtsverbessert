@@ -36,7 +36,7 @@
       noice.enable = true;
       notify = {
         enable = true;
-        level = "warn";
+        settings.level = "warn";
       };
       gitsigns = {
         enable = true;
