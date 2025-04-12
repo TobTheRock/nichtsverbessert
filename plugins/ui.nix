@@ -47,7 +47,6 @@
       colorizer.enable = true;
       tagbar = {
         enable = true;
-        tagsPackage = pkgs.universal-ctags;
       };
       dressing.enable = true;
     };
