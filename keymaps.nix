@@ -304,7 +304,7 @@
       }
       {
         key = "<leader>cf";
-        action = "<cmd>lua vim.lsp.buf.formatting()<cr>";
+        action = "<cmd>lua vim.lsp.buf.format()<cr>";
         options.desc = "LSP Formatting";
       }
       {
@@ -317,6 +317,7 @@
         action = "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>";
         options.desc = "LSP Previous Diagnostic";
       }
+
       # rename symbol
       {
         key = "<leader>cR";
