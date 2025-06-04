@@ -60,7 +60,12 @@
           {
             __unkeyed-1 = "<leader>d";
             mode = "n";
-            group = "debugging";
+            group = "+debugging";
+          }
+          {
+            __unkeyed-1 = "<leader>a";
+            mode = "n";
+            group = "+ai";
           }
         ];
         win = {
@@ -324,12 +329,6 @@
         action = "<cmd>lua vim.lsp.buf.rename()<cr>";
         options.desc = "LSP Rename Symbol";
       }
-      # Copilot chat
-      {
-        key = "<leader>cc";
-        action = "<cmd>lua require('CopilotChat').open()<cr>";
-        options.desc = "Copilot Chat";
-      }
 
       # Neotest
       {
@@ -540,6 +539,32 @@
           "<CMD>lua require('dap.ext.vscode').load_launchjs()<CR><CMD>Telescope dap configurations<CR>";
         options = { desc = "Debug Configurations"; };
       }
+      # AI tools
+      {
+        key = "<leader>ac";
+        action = "<cmd>lua require('codecompanion').toggle()<cr>";
+        options.desc = "Toggle AI Chat";
+      }
+      {
+        key = "<leader>aa";
+        action = "<cmd>lua require('codecompanion').actions()<cr>";
+        options.desc = "Toggle AI Actions";
+      }
+      {
+        key = "<leader>ap";
+        action = ":CodeCompanion #buffer ";
+        options.desc = "AI inline prompt";
+      }
+      {
+        key = "<leader>ae";
+        action = ":'<,'>CodeCompanion /explain";
+        options.desc = "AI explain selected";
+      }
+      {
+        key = "<leader>af";
+        action = ":'<,'>CodeCompanion /fix";
+        options.desc = "AI explain selected";
+      }
 
       # Terminal Mappings
       # {
@@ -572,6 +597,7 @@
         mode = "t";
         action = "<C-\\><C-N><C-w>l";
       }
+
     ];
   };
 }
