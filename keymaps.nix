@@ -293,7 +293,7 @@
         options.desc = "LSP Definition";
       }
       {
-        key = "<leader>cr";
+        key = "<leader>cR";
         action = "<cmd>lua vim.lsp.buf.references()<cr>";
         options.desc = "LSP References";
       }
@@ -314,18 +314,23 @@
       }
       {
         key = "<leader>cn";
-        action = "<cmd>lua vim.lsp.diagnostic.goto_next()<cr>";
+        action = "<cmd>lua vim.lsp.diagnostic.get_next()<cr>";
         options.desc = "LSP Next Diagnostic";
       }
       {
         key = "<leader>cp";
-        action = "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>";
+        action = "<cmd>lua vim.lsp.diagnostic.get_prev()<cr>";
         options.desc = "LSP Previous Diagnostic";
+      }
+      {
+        key = "<leader>ce";
+        action = "<cmd>lua vim.diagnostic.open_float()<cr>";
+        options.desc = "Show LSP Error Under Cursor";
       }
 
       # rename symbol
       {
-        key = "<leader>cR";
+        key = "<leader>cr";
         action = "<cmd>lua vim.lsp.buf.rename()<cr>";
         options.desc = "LSP Rename Symbol";
       }

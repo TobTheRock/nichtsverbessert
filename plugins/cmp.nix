@@ -6,6 +6,7 @@
     cmp-nvim-lsp = { enable = true; };
     cmp-path = { enable = true; };
     cmp_luasnip = { enable = true; };
+    copilot-cmp.enable = true;
 
     cmp = {
       enable = true;
@@ -22,6 +23,7 @@
           { name = "nvim_lua"; }
           { name = "mkdnflow"; }
           { name = "path"; }
+          { name = "copilot"; }
         ];
 
         formatting = {
