@@ -10,6 +10,7 @@
         tailwindcss.enable = true;
         html.enable = true;
         marksman.enable = true;
+        tsserver.enable = true;
       };
       keymaps.lspBuf = {
         "gd" = "definition";
