@@ -10,7 +10,7 @@
         tailwindcss.enable = true;
         html.enable = true;
         marksman.enable = true;
-        tsserver.enable = true;
+        ts-ls.enable = true;
       };
       keymaps.lspBuf = {
         "gd" = "definition";
@@ -38,6 +38,12 @@
       settings = {
         tools.test_executor = "neotest";
         lint.default = "clippy";
+        inlayHints = {
+          typeHints.enable = true;
+          bindingModeHints.enable = true;
+          closureStyle = "rust_analyzer";
+          closureReturnTypeHints.enable = true;
+        };
       };
     };
   };
