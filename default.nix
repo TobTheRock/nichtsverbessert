@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ inputs, pkgs, ... }: {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
     ./plugins/cmp.nix
@@ -19,5 +19,8 @@
     ./keymaps.nix
   ];
 
-  programs.nixvim.enable = true;
+  programs.nixvim = {
+    enable = true;
+    nixpkgs.config.allowUnfree = true;
+  };
 }

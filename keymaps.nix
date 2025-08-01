@@ -545,31 +545,44 @@
         options = { desc = "Debug Configurations"; };
       }
       # AI tools
-      {
-        key = "<leader>ac";
-        action = "<cmd>lua require('codecompanion').toggle()<cr>";
-        options.desc = "Toggle AI Chat";
-      }
-      {
-        key = "<leader>aa";
-        action = "<cmd>lua require('codecompanion').actions()<cr>";
-        options.desc = "Toggle AI Actions";
-      }
-      {
-        key = "<leader>ap";
-        action = ":CodeCompanion #buffer ";
-        options.desc = "AI inline prompt";
-      }
-      {
-        key = "<leader>ae";
-        action = ":'<,'>CodeCompanion /explain";
-        options.desc = "AI explain selected";
-      }
-      {
-        key = "<leader>af";
-        action = ":'<,'>CodeCompanion /fix";
-        options.desc = "AI explain selected";
-      }
+      # {
+      #   key = "<leader>ac";
+      #   action = "<cmd>lua require('codecompanion').toggle()<cr>";
+      #   options.desc = "Toggle AI Chat";
+      # }
+      # {
+      #   key = "<leader>aa";
+      #   action = "<cmd>lua require('codecompanion').actions()<cr>";
+      #   options.desc = "Toggle AI Actions";
+      # }
+      # {
+      #   key = "<leader>ap";
+      #   action = ":CodeCompanion #buffer ";
+      #   options.desc = "AI inline prompt";
+      # }
+      # {
+      #   key = "<leader>ae";
+      #   action = ":'<,'>CodeCompanion /explain";
+      #   options.desc = "AI explain selected";
+      # }
+      # {
+      #   key = "<leader>af";
+      #   action = ":'<,'>CodeCompanion /fix";
+      #   options.desc = "AI explain selected";
+      # }
+      #
+
+      # Claude code
+      # {
+      #   key = "<leader>ac";
+      #   action = "<cmd>ClaudeCode<cr>";
+      #   options.desc  = "Toggle Claude Code";
+      # }
+      # {
+      #   key = "<leader>ar";
+      #   action = "<cmd>ClaudeCodeResume<cr>";
+      #   options.desc   = "Resume Claude Code";
+      # }
 
       # Terminal Mappings
       # {

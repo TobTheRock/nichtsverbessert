@@ -3,6 +3,7 @@
     lsp-format.enable = true;
     lsp = {
       enable = true;
+      inlayHints = true;
       servers = {
         bashls.enable = true;
         clangd.enable = true;

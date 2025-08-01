@@ -8,7 +8,51 @@
       #   enable = true;
       #   package = pkgs.vimPlugins.copilot-vim;
       # };
-      codecompanion.enable = true;
+      # codecompanion = {
+      #   enable = true;
+      #   settings = {
+      #     strategies = {
+      #       chat = {
+      #         adapter = "anthropic";
+      #       };
+      #       inline = {
+      #         adapter = "anthropic";
+      #       };
+      #     };
+      #     adapters = {
+      #       anthropic = {
+      #         name = "anthropic";
+      #         roles = {
+      #           llm = "claude-3-5-sonnet-20241022";
+      #           inline = "claude-3-5-haiku-20241022";
+      #         };
+      #       };
+      #     };
+      #   };
+      # };
+      claude-code = {
+        enable = true;
+        settings = {
+          terminal = {
+            position = "right";
+            size = 80;
+          };
+          auto_reload = true;
+          debug = false;
+          keymaps = {
+            toggle = {
+              normal = "<leader>ac";
+              terminal = "<C-,>";
+              variants = {
+                continue = "<leader>aC";
+                verbose = "<leader>aV";
+              };
+            };
+            window_navigation = true;
+            scrolling = true;
+          };
+        };
+      };
       copilot-lua = {
         enable = true;
         autoLoad = true;
