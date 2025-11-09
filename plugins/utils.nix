@@ -8,55 +8,36 @@
       #   enable = true;
       #   package = pkgs.vimPlugins.copilot-vim;
       # };
-      # codecompanion = {
+      codecompanion = {
+        enable = true;
+      };
+      # claude-code = {
       #   enable = true;
       #   settings = {
-      #     strategies = {
-      #       chat = {
-      #         adapter = "anthropic";
-      #       };
-      #       inline = {
-      #         adapter = "anthropic";
-      #       };
+      #     terminal = {
+      #       position = "right";
+      #       size = 80;
       #     };
-      #     adapters = {
-      #       anthropic = {
-      #         name = "anthropic";
-      #         roles = {
-      #           llm = "claude-3-5-sonnet-20241022";
-      #           inline = "claude-3-5-haiku-20241022";
+      #     auto_reload = true;
+      #     debug = false;
+      #     keymaps = {
+      #       toggle = {
+      #         normal = "<leader>ac";
+      #         terminal = "<C-,>";
+      #         variants = {
+      #           continue = "<leader>aC";
+      #           verbose = "<leader>aV";
       #         };
       #       };
+      #       window_navigation = true;
+      #       scrolling = true;
       #     };
       #   };
       # };
-      claude-code = {
-        enable = true;
-        settings = {
-          terminal = {
-            position = "right";
-            size = 80;
-          };
-          auto_reload = true;
-          debug = false;
-          keymaps = {
-            toggle = {
-              normal = "<leader>ac";
-              terminal = "<C-,>";
-              variants = {
-                continue = "<leader>aC";
-                verbose = "<leader>aV";
-              };
-            };
-            window_navigation = true;
-            scrolling = true;
-          };
-        };
-      };
-      copilot-lua = {
-        enable = true;
-        autoLoad = true;
-      };
+      # copilot-lua = {
+      #   enable = true;
+      #   autoLoad = true;
+      # };
       # copilot-chat.enable = true;
       flash.enable = true;
       image = {
