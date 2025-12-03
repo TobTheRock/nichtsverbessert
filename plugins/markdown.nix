@@ -9,10 +9,11 @@ in {
   programs.nixvim = {
     plugins.mkdnflow = {
       enable = true;
-      modules = { conceal = false; };
+      settings = {
+        modules = { conceal = false; };
 
-      toDo.symbols = [ " " "-" "x" "!" "/" ];
-      mappings = {
+        to_do.symbols = [ " " "-" "x" "!" "/" ];
+        mappings = {
         MkdnCreateLink = false;
         MkdnCreateLinkFromClipboard = {
           key = "<leader>ml";
@@ -112,6 +113,7 @@ in {
         MkdnYankFileAnchorLink = {
           key = "yfa";
           modes = "n";
+        };
         };
       };
     };
