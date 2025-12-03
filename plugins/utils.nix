@@ -8,32 +8,32 @@
       #   enable = true;
       #   package = pkgs.vimPlugins.copilot-vim;
       # };
-      codecompanion = {
-        enable = true;
-      };
-      # claude-code = {
+      # codecompanion = {
       #   enable = true;
-      #   settings = {
-      #     terminal = {
-      #       position = "right";
-      #       size = 80;
-      #     };
-      #     auto_reload = true;
-      #     debug = false;
-      #     keymaps = {
-      #       toggle = {
-      #         normal = "<leader>ac";
-      #         terminal = "<C-,>";
-      #         variants = {
-      #           continue = "<leader>aC";
-      #           verbose = "<leader>aV";
-      #         };
-      #       };
-      #       window_navigation = true;
-      #       scrolling = true;
-      #     };
-      #   };
       # };
+      claude-code = {
+        enable = true;
+        settings = {
+          terminal = {
+            position = "right";
+            size = 80;
+          };
+          auto_reload = true;
+          debug = false;
+          keymaps = {
+            toggle = {
+              normal = "<leader>ac";
+              terminal = "<C-,>";
+              variants = {
+                continue = "<leader>aC";
+                verbose = "<leader>aV";
+              };
+            };
+            window_navigation = true;
+            scrolling = true;
+          };
+        };
+      };
       # copilot-lua = {
       #   enable = true;
       #   autoLoad = true;
