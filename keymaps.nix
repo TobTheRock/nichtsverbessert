@@ -67,6 +67,11 @@
             mode = "n";
             group = "+ai";
           }
+          {
+            __unkeyed-1 = "<leader>g";
+            mode = "n";
+            group = "+git";
+          }
         ];
         win = {
           border = "rounded";
