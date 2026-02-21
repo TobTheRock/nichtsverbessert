@@ -21,7 +21,7 @@ in {
         };
         MkdnDecreaseHeading = {
           key = "<leader>m-";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnDestroyLink = false;
         MkdnEnter = {
@@ -31,71 +31,71 @@ in {
         MkdnExtendList = false;
         MkdnFoldSection = {
           key = "<leader>mf";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnUnfoldSection = {
           key = "<leader>mF";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnFollowLink = {
           key = "gd";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnGoBack = false;
         MkdnGoForward = false;
         MkdnIncreaseHeading = {
           key = "<leader>m+";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnMoveSource = false;
         MkdnNewListItem = false;
         MkdnNewListItemAboveInsert = {
           key = "O";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnNewListItemBelowInsert = {
           key = "o";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnNextHeading = {
           key = "<leader>m#";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnNextLink = {
           key = "<S-Tab>";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnPrevHeading = {
           key = "<leader>m*";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnPrevLink = false;
         MkdnSTab = false;
         MkdnTab = false;
         MkdnTableNewColAfter = {
           key = "<leader>mc";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnTableNewColBefore = {
           key = "<leader>mC";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnTableNewRowAbove = {
           key = "<leader>mR";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnTableNewRowBelow = {
           key = "<leader>mr";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnTableNextCell = {
           key = "<C-Tab>";
-          modes = "i";
+          modes = [ "i" ];
         };
         MkdnTableNextRow = false;
         MkdnTablePrevCell = {
           key = "<S-Tab>";
-          modes = "i";
+          modes = [ "i" ];
         };
         MkdnTablePrevRow = false;
         MkdnToggleToDo = {
@@ -104,15 +104,15 @@ in {
         };
         MkdnUpdateNumbering = {
           key = "<leader>mn";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnYankAnchorLink = {
           key = "ya";
-          modes = "n";
+          modes = [ "n" ];
         };
         MkdnYankFileAnchorLink = {
           key = "yfa";
-          modes = "n";
+          modes = [ "n" ];
         };
         };
       };
