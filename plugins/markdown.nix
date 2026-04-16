@@ -12,7 +12,22 @@ in {
       settings = {
         modules = { conceal = false; };
 
-        to_do.symbols = [ " " "-" "x" "!" "/" ];
+        to_do = {
+          statuses = {
+            not_started.marker = " ";
+            in_progress.marker = "-";
+            complete.marker = "x";
+            important = {
+              marker = "!";
+              highlight = {
+                marker.link = "WarningMsg";
+                content.bold = true;
+              };
+            };
+            cancelled.marker = "/";
+          };
+          status_order = [ "not_started" "in_progress" "complete" "important" "cancelled" ];
+        };
         mappings = {
         MkdnCreateLink = false;
         MkdnCreateLinkFromClipboard = {
