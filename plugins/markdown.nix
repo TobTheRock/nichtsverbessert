@@ -152,7 +152,8 @@ in {
     };
     extraPlugins = [
       (pkgs.vimUtils.buildVimPlugin {
-        name = "markdown.nvim";
+        pname = "markdown.nvim";
+        version = "0-unstable";
         src = inputs.plugin-markdown;
       })
     ];
