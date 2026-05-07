@@ -82,6 +82,13 @@
 
     keymaps = [
       # General Mappings
+      # Help
+      {
+        key = "<leader>?";
+        action = "<cmd>lua require('telescope.builtin').keymaps()<cr>";
+        options.desc = "Show all keymaps";
+      }
+
       {
         key = "<leader>e";
         action = "<cmd>Oil --float<cr>";

@@ -22,10 +22,10 @@
             "-" = "actions.parent";
             "b" = "actions.parent";
             "<C-c>" = "actions.close";
-            "<C-h>" = "actions.select_split";
-            "<C-l>" = "actions.refresh";
+            "<C-x>" = "actions.select_split";
+            "<C-r>" = "actions.refresh";
             "<C-p>" = "actions.preview";
-            "<C-s>" = "actions.select_vsplit";
+            "<C-v>" = "actions.select_vsplit";
             "<C-t>" = "actions.select_tab";
             "<CR>" = "actions.select";
             _ = "actions.open_cwd";
