@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, inputs, ... }: {
   programs.nixvim = {
     highlightOverride = {
       FloatBorder.fg = "#${config.lib.stylix.colors.base0D}";
@@ -11,29 +11,6 @@
       # codecompanion = {
       #   enable = true;
       # };
-      claude-code = {
-        enable = true;
-        settings = {
-          terminal = {
-            position = "right";
-            size = 80;
-          };
-          auto_reload = true;
-          debug = false;
-          keymaps = {
-            toggle = {
-              normal = "<leader>ac";
-              terminal = "<C-,>";
-              variants = {
-                continue = "<leader>aC";
-                verbose = "<leader>aV";
-              };
-            };
-            window_navigation = true;
-            scrolling = true;
-          };
-        };
-      };
       # copilot-lua = {
       #   enable = true;
       #   autoLoad = true;
@@ -72,5 +49,20 @@
       yanky.enable = true;
       spectre.enable = true;
     };
+    extraPlugins = [
+      (pkgs.vimUtils.buildVimPlugin {
+        pname = "agentic.nvim";
+        version = "0-unstable";
+        src = inputs.plugin-agentic;
+        doCheck = false;
+      })
+    ];
+    extraConfigLua =
+      # lua
+      ''
+        require("agentic").setup({
+          provider = "claude-agent-acp",
+        })
+      '';
   };
 }

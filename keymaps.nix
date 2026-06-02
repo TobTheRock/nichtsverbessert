@@ -583,16 +583,27 @@
       #   options.desc = "AI explain selected";
       # }
 
-      # Claude code
+      # AI (agentic.nvim via ACP)
       {
         key = "<leader>ac";
-        action = "<cmd>ClaudeCode<cr>";
-        options.desc = "Toggle Claude Code";
+        action.__raw = "function() require('agentic').toggle() end";
+        options.desc = "Toggle AI Chat";
+      }
+      {
+        key = "<leader>an";
+        action.__raw = "function() require('agentic').new_session() end";
+        options.desc = "New AI Session";
+      }
+      {
+        key = "<leader>af";
+        mode = [ "n" "v" ];
+        action.__raw = "function() require('agentic').add_selection_or_file_to_context() end";
+        options.desc = "Add File/Selection to AI Context";
       }
       {
         key = "<leader>ar";
-        action = "<cmd>ClaudeCodeResume<cr>";
-        options.desc = "Resume Claude Code";
+        action.__raw = "function() require('agentic').restore_session_by_id() end";
+        options.desc = "Restore AI Session";
       }
 
       # Terminal Mappings
