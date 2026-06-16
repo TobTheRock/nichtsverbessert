@@ -21,6 +21,9 @@
 
   programs.nixvim = {
     enable = true;
+    # We make nixvim follow our nixpkgs (see flake.nix); set the source
+    # explicitly to suppress the mismatch warning this triggers.
+    nixpkgs.source = inputs.nixpkgs;
     nixpkgs.config.allowUnfree = true;
   };
 }
