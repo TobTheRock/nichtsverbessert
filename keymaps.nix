@@ -602,7 +602,7 @@
       }
       {
         key = "<leader>ar";
-        action.__raw = "function() require('agentic').restore_session_by_id() end";
+        action.__raw = "function() require('agentic').restore_session() end";
         options.desc = "Restore AI Session";
       }
 
