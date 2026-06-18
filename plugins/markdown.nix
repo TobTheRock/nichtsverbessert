@@ -46,10 +46,10 @@ in {
           MkdnNewListItemAboveInsert = [ [ "n" ] "O" ];
           MkdnNewListItemBelowInsert = [ [ "n" ] "o" ];
           MkdnNextHeading = [ [ "n" ] "<leader>m#" ];
-          MkdnTableAlignLeft = [ [ "n" ] "<leader>mal" ];
-          MkdnTableAlignCenter = [ [ "n" ] "<leader>mac" ];
-          MkdnTableAlignRight = [ [ "n" ] "<leader>mar" ];
-          MkdnTableAlignDefault = [ [ "n" ] "<leader>max" ];
+          MkdnTableAlignLeft = [ [ "n" ] "<leader>m<" ];
+          MkdnTableAlignCenter = [ [ "n" ] "<leader>m=" ];
+          MkdnTableAlignRight = [ [ "n" ] "<leader>m>" ];
+          MkdnTableAlignDefault = [ [ "n" ] "<leader>m0" ];
           MkdnNextLink = [ [ "n" ] "<S-Tab>" ];
           MkdnPrevHeading = [ [ "n" ] "<leader>m*" ];
           MkdnPrevLink = false;

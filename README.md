@@ -112,12 +112,39 @@ Press `<leader>` and wait to see all groups via which-key, or `<leader>?` to fuz
 | `<leader>dk` | Stack frame up |
 | `<leader>dl` | Run last |
 
-## AI (`<leader>a`)
+## AI (`<leader>a`) — agentic.nvim (ACP)
 
 | Key | Action |
 |---|---|
-| `<leader>ac` | Toggle Claude Code |
-| `<leader>ar` | Resume Claude Code |
+| `<leader>ac` | Toggle AI chat |
+| `<leader>an` | New AI session |
+| `<leader>af` | Add file/selection to context (normal/visual) |
+| `<leader>ar` | Restore AI session |
+
+## Markdown (`<leader>m`) — mkdnflow
+
+| Key | Action |
+|---|---|
+| `<leader>ml` | Create link from clipboard (normal/visual) |
+| `<leader>m+` | Increase heading |
+| `<leader>m-` | Decrease heading |
+| `<leader>m#` | Next heading |
+| `<leader>m*` | Previous heading |
+| `<leader>mf` | Fold section |
+| `<leader>mF` | Unfold section |
+| `<leader>mn` | Update list numbering |
+| `<leader>mc` | New table column after |
+| `<leader>mC` | New table column before |
+| `<leader>mr` | New table row below |
+| `<leader>mR` | New table row above |
+| `<leader>m<` | Align table column left |
+| `<leader>m=` | Align table column center |
+| `<leader>m>` | Align table column right |
+| `<leader>m0` | Reset table column alignment |
+| `gd` | Follow link |
+| `<Tab>` / `<S-Tab>` | Next / previous link |
+| `<C-Space>` | Toggle to-do status |
+| `o` / `O` | New list item below / above |
 
 ## UI (`<leader>u`)
 
