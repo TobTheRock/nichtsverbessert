@@ -7,6 +7,7 @@
       servers = {
         bashls.enable = true;
         clangd.enable = true;
+        gopls.enable = true;
         nixd.enable = true;
         tailwindcss.enable = true;
         html.enable = true;
@@ -27,6 +28,7 @@
         diagnostics = { statix.enable = true; };
         formatting = {
           nixfmt.enable = true;
+          goimports.enable = true;
           markdownlint.enable = true;
           tidy.enable = true;
           shellharden.enable = true;
