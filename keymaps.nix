@@ -605,6 +605,32 @@
         action.__raw = "function() require('agentic').restore_session() end";
         options.desc = "Restore AI Session";
       }
+      {
+        key = "<leader>av";
+        mode = [ "n" "v" ];
+        action.__raw = "function() require('agentic').add_selection() end";
+        options.desc = "Add Selection to AI Context";
+      }
+      {
+        key = "<leader>as";
+        action.__raw = "function() require('agentic').stop_generation() end";
+        options.desc = "Stop AI Generation";
+      }
+      {
+        key = "<leader>ad";
+        action.__raw = "function() require('agentic').add_buffer_diagnostics() end";
+        options.desc = "Add Buffer Diagnostics to AI Context";
+      }
+      {
+        key = "<leader>aD";
+        action.__raw = "function() require('agentic').add_current_line_diagnostics() end";
+        options.desc = "Add Line Diagnostics to AI Context";
+      }
+      {
+        key = "<leader>al";
+        action.__raw = "function() require('agentic').rotate_layout() end";
+        options.desc = "Rotate AI Layout";
+      }
 
       # Terminal Mappings
       # {

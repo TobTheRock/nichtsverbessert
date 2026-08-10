@@ -120,6 +120,10 @@ Press `<leader>` and wait to see all groups via which-key, or `<leader>?` to fuz
 | `<leader>an` | New AI session |
 | `<leader>af` | Add file/selection to context (normal/visual) |
 | `<leader>ar` | Restore AI session |
+| `<leader>as` | Stop AI generation |
+| `<leader>ad` | Add buffer diagnostics to context |
+| `<leader>aD` | Add current-line diagnostics to context |
+| `<leader>al` | Rotate AI layout |
 
 ## Markdown (`<leader>m`) — mkdnflow
 
