@@ -3,7 +3,7 @@ let
   accent = "#${config.lib.stylix.colors.base0D}";
   muted = "#${config.lib.stylix.colors.base03}";
   foreground = "#${config.lib.stylix.colors.base05}";
-  configDir = config.var.configDirectory;
+  configDir = config.nvim.configDirectory;
 in {
 
   programs.nixvim.highlight = {

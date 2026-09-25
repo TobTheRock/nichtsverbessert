@@ -1,3 +1,37 @@
+# nvim
+
+Shared [nixvim](https://github.com/nix-community/nixvim) configuration, consumed
+by both the NixOS config (`nichtsbs`) and the macOS config (`mac`).
+
+## Usage
+
+```nix
+{
+  inputs = {
+    nvim.url = "github:TobTheRock/nvim";
+    nixpkgs.follows = "nvim/nixpkgs";
+  };
+
+  # ... in a home-manager config:
+  modules = [
+    inputs.nvim.homeModules.nvim
+    inputs.nvim.homeModules.stylix-minimal   # or bring your own stylix
+    { nvim.configDirectory = "/path/to/your/nix/config"; }
+  ];
+}
+```
+
+| Output | Inhalt |
+|---|---|
+| `homeModules.nvim` | die Konfiguration; braucht stylix im Host-Config |
+| `homeModules.stylix-minimal` | Palette + Mono-Font, ohne Desktop-Targets |
+| `lib.base16` | die Palette als Attrset, zum Mitthemen |
+
+Einziger Knopf: `nvim.configDirectory` — das Repo, das der Dashboard-Button
+öffnet.
+
+---
+
 # Neovim Keymaps
 
 Leader: `Space`
