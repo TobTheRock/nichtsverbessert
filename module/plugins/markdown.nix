@@ -99,6 +99,8 @@ in {
       # lua
       ''
         require('render-markdown').setup({
+          -- AgenticChat: agentic.nvim's chat buffer.
+          file_types = { 'markdown', 'AgenticChat' },
           heading = {
             icons = { '# ', '󰲣 ', '󰲥 ', '󰲧 ', '󰲩 ', '󰲫 ' },
             backgrounds = {
