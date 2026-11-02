@@ -1,5 +1,15 @@
-{
+{ pkgs, ... }:
+let
+  # mmdc renders mermaid code blocks for snacks.image. It drives a headless
+  # Chrome, which nixpkgs' mermaid-cli doesn't bundle on darwin.
+  mmdc = pkgs.writeShellScriptBin "mmdc" ''
+    export PUPPETEER_EXECUTABLE_PATH="${pkgs.google-chrome}/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    exec ${pkgs.mermaid-cli}/bin/mmdc "$@"
+  '';
+in {
   programs.nixvim = {
+    extraPackages = [ mmdc ];
+
     plugins.snacks = {
       enable = true;
       settings = {
