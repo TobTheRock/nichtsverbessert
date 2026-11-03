@@ -8,7 +8,8 @@ let
   '';
 in {
   programs.nixvim = {
-    extraPackages = [ mmdc ];
+    # snacks.image runs `magick identify` on every rendered image, mmdc output included.
+    extraPackages = [ mmdc pkgs.imagemagick ];
 
     plugins.snacks = {
       enable = true;
