@@ -11,6 +11,10 @@ in {
     # snacks.image runs `magick identify` on every rendered image, mmdc output included.
     extraPackages = [ mmdc pkgs.imagemagick ];
 
+    # snacks.image normally starts on the first file read; scratch buffers
+    # like the agentic chat never trigger one, so start it at launch.
+    extraConfigLuaPost = "Snacks.image.setup()";
+
     plugins.snacks = {
       enable = true;
       settings = {
