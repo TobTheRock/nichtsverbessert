@@ -18,10 +18,7 @@ in {
     plugins.snacks = {
       enable = true;
       settings = {
-        image = {
-          enable = true;
-          doc = { inline = false; };
-        };
+        image.enable = true;
         quickfile.enable = true;
         statuscolumn.enable = true;
         zen.enable = true;
