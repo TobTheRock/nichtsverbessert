@@ -55,6 +55,13 @@ inputs: { config, pkgs, ... }: {
         version = "0-unstable";
         src = inputs.plugin-agentic;
         doCheck = false;
+        postPatch = ''
+          cp ${./agentic/fence.lua} lua/agentic/utils/fence.lua
+          substituteInPlace lua/agentic/ui/message_writer.lua \
+            --replace-fail \
+              'vim.list_extend(lines, tool_call_block.body)' \
+              'vim.list_extend(lines, require("agentic.utils.fence").balance(tool_call_block.body))'
+        '';
       })
     ];
     extraConfigLua =
