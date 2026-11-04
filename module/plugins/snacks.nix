@@ -9,7 +9,8 @@ let
 in {
   programs.nixvim = {
     # snacks.image runs `magick identify` on every rendered image, mmdc output included.
-    extraPackages = [ mmdc pkgs.imagemagick ];
+    # tectonic renders LaTeX math; it downloads TeX packages on first use.
+    extraPackages = [ mmdc pkgs.imagemagick pkgs.tectonic ];
 
     # snacks.image normally starts on the first file read; scratch buffers
     # like the agentic chat never trigger one, so start it at launch.
